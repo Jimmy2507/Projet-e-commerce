@@ -4,6 +4,7 @@
 
 		public static function add(Utilisateurs $objet){
 			$db = DbConnect::getDb();
+			$objet->setMdpUtilisateur(crypter($objet->getMdpUtilisateur()));
 			$requete = $db->prepare("INSERT INTO utilisateurs (pseudoUtilisateur,mdpUtilisateur,mailUtilisateur,nomUtilisateur,prenomUtilisateur,adresseUtilisateur,telUtilisateur,idRole,idPanier) VALUES (:pseudoUtilisateur,:mdpUtilisateur,:mailUtilisateur,:nomUtilisateur,:prenomUtilisateur,:adresseUtilisateur,:telUtilisateur,:idRole,:idPanier)");
 			$requete->bindValue(":pseudoUtilisateur", $objet->getPseudoUtilisateur());
 			$requete->bindValue(":mdpUtilisateur", $objet->getMdpUtilisateur());
@@ -19,6 +20,7 @@
 
 		public static function update(Utilisateurs $objet){
 			$db = DbConnect::getDb();
+			$objet->setMdpUtilisateur(crypter($objet->getMdpUtilisateur()));
 			$requete = $db->prepare("UPDATE utilisateurs SET pseudoUtilisateur=:pseudoUtilisateur,mdpUtilisateur=:mdpUtilisateur,mailUtilisateur=:mailUtilisateur,nomUtilisateur=:nomUtilisateur,prenomUtilisateur=:prenomUtilisateur,adresseUtilisateur=:adresseUtilisateur,telUtilisateur=:telUtilisateur,idRole=:idRole,idPanier=:idPanier WHERE idUtilisateur=:idUtilisateur");
 			$requete->bindValue(":pseudoUtilisateur", $objet->getPseudoUtilisateur());
 			$requete->bindValue(":mdpUtilisateur", $objet->getMdpUtilisateur());
@@ -60,5 +62,22 @@
 				}
 			}return $liste;
 		}
+
+		public static function findByPseudo($pseudo){
+            $db = DbConnect::getDb();
+            if (!strstr($pseudo,";")){
+                $requete = $db->query("SELECT * FROM utilisateurs WHERE pseudoUtilisateur ='" . $pseudo . "'");
+                $resultats = $requete->fetch(PDO::FETCH_ASSOC);
+                if ($resultats != false){
+                    return new Utilisateurs($resultats);
+                }
+                else{
+                    return false;
+                }
+            }
+            else{
+                return false;
+            }
+        }
 
 	}
