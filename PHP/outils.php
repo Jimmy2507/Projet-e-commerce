@@ -8,6 +8,7 @@ function chargerClasse($classe){
         require "PHP/modele/" . $classe . ".class.php";
     }
 }
+spl_autoload_register("ChargerClasse");
 
 function chargerPage($tab){
     $chemin = $tab[0];

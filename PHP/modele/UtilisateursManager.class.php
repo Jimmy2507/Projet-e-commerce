@@ -64,7 +64,7 @@
 		public static function findByPseudo($pseudo){
             $db = DbConnect::getDb();
             if (!strstr($pseudo,";")){
-                $requete = $db->query("SELECT * FROM utilisateurs WHERE pseudoUtilisateur ='" . $pseudo . "'");
+                $requete = $db->query("SELECT * FROM utilisateurs WHERE pseudoUtilisateur ='".$pseudo."'");
                 $resultats = $requete->fetch(PDO::FETCH_ASSOC);
                 if ($resultats != false){
                     return new Utilisateurs($resultats);
@@ -77,5 +77,6 @@
                 return false;
             }
         }
+
 
 	}
