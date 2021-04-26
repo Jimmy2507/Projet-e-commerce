@@ -28,5 +28,6 @@
         chargerPage($routes["default"]);
     }
 
-    Parametre::init();
+    Parametres::init();
     DbConnect::init();
+    // session_start();
