@@ -20,7 +20,7 @@
                 </div>
                 <div class="espaceV1"></div>
                 <?php
-                    if(isset($_SESSION["utilisateur"])){
+                    if(isset($_SESSION["LDHA_utilisateur"])){
                     echo "<a href='?page=actionDeconnexion'><div class='icones'><i class='fas fa-key'></i>Déconnexion</div></a>";
                     }else{
                     echo "<a href='?page=formConnexion'><div class='icones'><i class='fas fa-key'></i>Connexion</div></a>";
