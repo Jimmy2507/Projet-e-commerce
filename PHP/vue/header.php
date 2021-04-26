@@ -23,7 +23,7 @@
                     if(isset($_SESSION["utilisateur"])){
                     echo "<a href='?page=actionDeconnexion'><div class='icones'><i class='fas fa-key'></i>Déconnexion</div></a>";
                     }else{
-                    echo "<a href='?page=connexion'><div class='icones'><i class='fas fa-key'></i>Connexion</div></a>";
+                    echo "<a href='?page=formConnexion'><div class='icones'><i class='fas fa-key'></i>Connexion</div></a>";
                     }
                 ?>
             </div>
