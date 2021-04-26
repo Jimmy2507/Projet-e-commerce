@@ -5,8 +5,8 @@ if ($uti != false)
     if (crypter($_POST['mdpUtilisateur']) == $uti->getMdpUtilisateur())
     {
         echo 'connexion reussie';
-        $_SESSION['LDHA_Utilisateur']=$uti;
-        header("refresh:1;url=index.php?page=pageCo");
+        $_SESSION['LDHA_utilisateur']=$uti;
+        header("refresh:1;url=?page=test");
     }
     else
     {

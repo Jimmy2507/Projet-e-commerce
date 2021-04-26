@@ -10,7 +10,7 @@
             'compte'=>['PHP/vue/','compte','Mon compte'],
             'produit'=>['PHP/vue/','produit','Nom de l\'article'],
             '404'=>['PHP/vue/','404','Erreur 404'],
-
+            'test'=>['PHP/vue/','test','TEST'],
             //Listes
 
 
@@ -21,11 +21,12 @@
             //Action
             'actionInscription'=>['PHP/vue/','actionInscription','xx'],
             'actionConnexion'=>['PHP/vue/','actionConnexion','xx'],
+            'actionDeconnexion'=>['PHP/vue/','actionDeconnexion','xx'],
     ];    
 
     Parametres::init();
     DbConnect::init();
-    //session_start();
+    session_start();
     if (isset($_GET['page'])){
         if(isset($routes[$_GET['page']])){
             chargerPage($routes[$_GET['page']]);

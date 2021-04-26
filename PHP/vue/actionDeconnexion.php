@@ -1,3 +1,3 @@
 <?php
-unset($_SESSION['LDHA_Utilisateur']);
-header("location:?page=accueil");
+unset($_SESSION['LDHA_utilisateur']);
+header("location:?page=default");

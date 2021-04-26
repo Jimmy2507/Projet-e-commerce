@@ -1,13 +1,3 @@
-<!DOCTYPE html>
-<html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="firefox" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://kit.fontawesome.com/ebc16e5ffd.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="CSS/style.css" type="text/css" />
-    <title><?=$titre?></title>
-  </head>
 
 <body class="colonne">
     
@@ -32,7 +22,7 @@
         <nav>
             <div class="centre">
                 <a href=""><div>Tous nos produits</div></a>
-                <a href=""><div>Blbl</div></a>
+                <a href=""><div>Gestion Article</div></a>
             </div>
         </nav>
         <main class="colonne">
