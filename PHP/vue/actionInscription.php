@@ -1,7 +1,6 @@
 <?php
-//var_dump($_POST);
-if ($_POST['mdp'] == $_POST['confirmation'])
-{
+var_dump($_POST);
+
     $uti = UtilisateursManager::findByPseudo($_POST['pseudoUtilisateur']);
     if ($uti == false)
     {
@@ -12,6 +11,3 @@ if ($_POST['mdp'] == $_POST['confirmation'])
     }else{
         echo "Le pseudo existe deja";
     }
-}else{
-    echo "la confirmation ne correspond pas au mot de passe";
-}

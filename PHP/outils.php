@@ -16,7 +16,6 @@ function chargerPage($tab){
 
     include 'PHP/vue/head.php';
     include 'PHP/vue/header.php';
-    include 'PHP/vue/nav.php';
     include $chemin . $nom . '.php'; //Chargement de la page en fonction du chemin et du nom
     include 'PHP/vue/footer.php';
 }

@@ -13,7 +13,7 @@ class DbConnect
     {
         try {
             // On se connecte � MySQL
-           self::$db = new PDO('mysql:host=' . Parametre::getHost() . ';port=' . Parametre::getPort() . ';dbname=' . Parametre::getDbname() . ';charset=utf8', Parametre::getLogin(), Parametre::getPwd());
+           self::$db = new PDO('mysql:host=' . Parametres::getHost() . ';port=' . Parametres::getPort() . ';dbname=' . Parametres::getDbname() . ';charset=utf8', Parametres::getLogin(), Parametres::getPwd());
         }
         catch (Exception $e)
         {

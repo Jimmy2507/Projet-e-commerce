@@ -14,8 +14,8 @@
 
 
             //Formulaires
-            'formInscription'=>['PHP/vue/','formInscription','xx'],
-            'formInscription'=>['PHP/vue/','formInscription','xx'],
+            'formInscription'=>['PHP/vue/','formInscription','Inscription'],
+            'formConnexion'=>['PHP/vue/','formConnexion','Connexion'],
 
             //Action
             'actionInscription'=>['PHP/vue/','actionInscription','xx'],
@@ -33,5 +33,6 @@
         chargerPage($routes["default"]);
     }
 
-    Parametre::init();
+    Parametres::init();
     DbConnect::init();
+    // session_start();
