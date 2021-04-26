@@ -31,8 +31,8 @@
         </header>
         <nav>
             <div class="centre">
-                <a href="?page=listeSouscriptions"><div>Tous nos produits</div></a>
-                <a href="?page=listeTerrains"><div>Blbl</div></a>
+                <a href=""><div>Tous nos produits</div></a>
+                <a href=""><div>Blbl</div></a>
             </div>
         </nav>
         <main class="colonne">
