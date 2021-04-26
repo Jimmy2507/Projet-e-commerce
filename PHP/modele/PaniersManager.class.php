@@ -22,7 +22,7 @@
 
 		public static function delete(Paniers $objet){
 			$db = DbConnect::getDb();
-			$db->exec("DELETE FROM paniers WHERE idPanier=".$objet->getIdUtilisateur());
+			$db->exec("DELETE FROM paniers WHERE idPanier=".$objet->getIdPanier());
 		}
 
 		public static function findById($id){

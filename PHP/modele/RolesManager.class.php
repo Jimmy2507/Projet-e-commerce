@@ -20,7 +20,7 @@
 
 		public static function delete(Roles $objet){
 			$db = DbConnect::getDb();
-			$db->exec("DELETE FROM roles WHERE idRole=".$objet->getIdUtilisateur());
+			$db->exec("DELETE FROM roles WHERE idRole=".$objet->getIdRole());
 		}
 
 		public static function findById($id){
