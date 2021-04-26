@@ -22,10 +22,15 @@ switch($mode){
         $dis = "";
         $submit = '<button>Supprimer</button>';
         break;
+    case "detail":
+        $sousTitre = '<h5>Détail du produit</h5>';
+        $dis = "";
+        $submit = '<button>Supprimer</button>';
+        break;
 }
 
 echo $sousTitre;
-echo '<form id="formulaire" method="post" action="index.php?page=actionProduits&mode=' . $mode . '" enctype="multipart/form-data>';
+echo '<form method="post" action="?page=actionProduits&mode=' . $mode . '" enctype="multipart/form-data">';
 if ($mode != "ajouter") {
     echo '<input type="hidden" name="idProduit" value="' . $produit->getIdProduit() . '">';
 }
@@ -34,21 +39,20 @@ echo '
     <input type="text" name="nomProduit" placeholder="Nom du produit" value="' . $produit->getNomProduit() . '" ' . $dis . '>
     <input type="text" name="prixProduit" placeholder="Prix du Produit" value"'.$produit->getPrixProduit().'" '.$dis.'>
     <input type ="text" name="descProduit" placeholder="Description" value"'.$produit->getDescProduit().'"'.$dis.'>
-    <input type="text" name="nomProduit" placeholder="Nom du produit" value="' . $produit->getNomProduit() . '" ' . $dis . '>
     ';
         if ($_GET["mode"] == "ajouter" || $_GET["mode"] == "modifier"){
             echo '
             <label for="imageUtilisateur">Image : </label>
             <input type="file" name="imageProduit">';
         }
-      echo'  <img src="'.$produit->getImageProduit().'" alt="imageProduit">';
 
 echo $submit;
 // dans tous les cas, on met le bouton annuler
 ?>
-    <a href="?page=accueil" class=" crudBtn crudBtnRetour">Annuler</a>
+    <a href="?page=listeProduits" class=" crudBtn crudBtnRetour">Annuler</a>
 </div>
     </div> 
     </div>
 
 </form>
+<img src="'.$produit->getImageProduit().'" alt="imageProduit">';
