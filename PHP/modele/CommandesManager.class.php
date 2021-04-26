@@ -24,7 +24,7 @@
 
 		public static function delete(Commandes $objet){
 			$db = DbConnect::getDb();
-			$db->exec("DELETE FROM commandes WHERE idCommande=".$objet->getIdUtilisateur());
+			$db->exec("DELETE FROM commandes WHERE idCommande=".$objet->getIdCommande());
 		}
 
 		public static function findById($id){

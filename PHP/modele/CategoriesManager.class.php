@@ -20,7 +20,7 @@
 
 		public static function delete(Categories $objet){
 			$db = DbConnect::getDb();
-			$db->exec("DELETE FROM categories WHERE idCategorie=".$objet->getIdUtilisateur());
+			$db->exec("DELETE FROM categories WHERE idCategorie=".$objet->getIdCategorie());
 		}
 
 		public static function findById($id){

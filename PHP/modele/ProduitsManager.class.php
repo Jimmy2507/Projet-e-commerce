@@ -28,7 +28,7 @@
 
 		public static function delete(Produits $objet){
 			$db = DbConnect::getDb();
-			$db->exec("DELETE FROM produits WHERE idProduit=".$objet->getIdUtilisateur());
+			$db->exec("DELETE FROM produits WHERE idProduit=".$objet->getIdProduit());
 		}
 
 		public static function findById($id){
