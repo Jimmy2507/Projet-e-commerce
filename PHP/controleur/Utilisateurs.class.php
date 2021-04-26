@@ -16,15 +16,15 @@
 		private $_idPanier;
 		
 		/* ****************Accesseurs***************** */
-		public function getIdUtilisateur()
-		{
-				return $this->_idUtilisateur;
+
+		public function setIdUtilisateur($idUtilisateur){
+			$this->_idUtilisateur = $idUtilisateur;
 		}
 		
-		public function setIdUtilisateur($idUtilisateur)
-		{
-				$this->_idUtilisateur = $idUtilisateur;
+		public function getIdUtilisateur(){
+			return $this->_idUtilisateur;
 		}
+
 		public function setPseudoUtilisateur($_pseudoUtilisateur){
 			$this->_pseudoUtilisateur = $_pseudoUtilisateur;
 		}
