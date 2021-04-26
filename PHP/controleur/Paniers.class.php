@@ -5,6 +5,7 @@
 		/* ****************Attributs***************** */
 
 		private $_idPanier;
+        private $_idUtilisateur;
 		private $_idProduit;
 		private $_qteProduit;
 		
@@ -16,6 +17,14 @@
 
 		public function getIdPanier(){
 			return $this->_idPanier;
+		}
+
+        public function setIdUtilisateur($_idUtilisateur){
+			$this->_idUtilisateur = $_idUtilisateur;
+		}
+
+		public function getIdUtilisateur(){
+			return $this->_idUtilisateur;
 		}
 
 		public function setIdProduit($_idProduit){

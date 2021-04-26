@@ -13,14 +13,13 @@
 		private $_adresseUtilisateur;
 		private $_telUtilisateur;
 		private $_idRole;
-		private $_idPanier;
 		
 		/* ****************Accesseurs***************** */
 
 		public function setIdUtilisateur($idUtilisateur){
 			$this->_idUtilisateur = $idUtilisateur;
 		}
-		
+
 		public function getIdUtilisateur(){
 			return $this->_idUtilisateur;
 		}
@@ -87,14 +86,6 @@
 
 		public function getIdRole(){
 			return $this->_idRole;
-		}
-
-		public function setIdPanier($_idPanier){
-			$this->_idPanier = $_idPanier;
-		}
-
-		public function getIdPanier(){
-			return $this->_idPanier;
 		}
 
 		/* ****************Constructeur***************** */
