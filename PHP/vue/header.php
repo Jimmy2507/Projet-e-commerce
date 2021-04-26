@@ -22,7 +22,7 @@
         <nav>
             <div class="centre">
                 <a href=""><div>Tous nos produits</div></a>
-                <a href=""><div>Gestion Article</div></a>
+                <a href="?page=listeProduits"><div>Gestion Article</div></a>
             </div>
         </nav>
         <main class="colonne">

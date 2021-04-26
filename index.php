@@ -12,16 +12,19 @@
             '404'=>['PHP/vue/','404','Erreur 404'],
             'test'=>['PHP/vue/','test','TEST'],
             //Listes
-
+            'listeProduits'=>['PHP/vue/','listeProduits','Liste des produits'],
+            'listeCategories'=>['PHP/vue/','listeCategories','Liste des produits'],
+            'listeUtilisateurs'=>['PHP/vue/','listeUtilisateurs','Liste des Utilisateur'],
 
             //Formulaires
             'formInscription'=>['PHP/vue/','formInscription','Inscription'],
             'formConnexion'=>['PHP/vue/','formConnexion','Connexion'],
-
+            'formGestionProduits'=>['PHP/vue/','formGestionProduits','Gestion des produits'],
             //Action
             'actionInscription'=>['PHP/vue/','actionInscription','xx'],
             'actionConnexion'=>['PHP/vue/','actionConnexion','xx'],
             'actionDeconnexion'=>['PHP/vue/','actionDeconnexion','xx'],
+            'actionProduits'=>['PHP/vue/','actionProduits','xx']
     ];    
 
     Parametres::init();
