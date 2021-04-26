@@ -22,6 +22,9 @@
             'actionConnexion'=>['PHP/vue/','actionConnexion','xx'],
     ];    
 
+    Parametres::init();
+    DbConnect::init();
+    //session_start();
     if (isset($_GET['page'])){
         if(isset($routes[$_GET['page']])){
             chargerPage($routes[$_GET['page']]);
@@ -33,6 +36,3 @@
         chargerPage($routes["default"]);
     }
 
-    Parametres::init();
-    DbConnect::init();
-    // session_start();
