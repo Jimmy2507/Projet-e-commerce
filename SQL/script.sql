@@ -67,7 +67,6 @@ ALTER TABLE commandes ADD CONSTRAINT commandes_produits_FK FOREIGN KEY (idProdui
 ALTER TABLE paniers ADD CONSTRAINT paniers_utilisateurs_FK FOREIGN KEY (idUtilisateur) REFERENCES utilisateurs(idUtilisateur);
 ALTER TABLE paniers ADD CONSTRAINT paniers_produits_FK FOREIGN KEY (idProduit) REFERENCES produits(idProduit);
 
-
--- INSERT INTO `utilisateurs` (`idUtilisateur`, `nom`, `prenom`, `motDePasse`, `adresseMail`, `role`, `pseudo`) VALUES
--- (7, 'ad', 'ad', '11d437a3e6695447bd1bf2331651049e', 'ad', 1, 'ad'),
--- (8, 'u', 'u', '1d0a5a28d53430e7f2293a1f36682f23', 'u', 2, 'u');
+INSERT INTO roles VALUES (null,'Administrateur');
+INSERT INTO roles VALUES (null,'Utilisateur');
+INSERT INTO utilisateurs VALUES (null,'admin','admin','admin@admin.fr','admin','admin','161 rue des Admins','0700000000',1);

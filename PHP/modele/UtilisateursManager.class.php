@@ -20,7 +20,7 @@
 		public static function update(Utilisateurs $objet){
 			$db = DbConnect::getDb();
 			$objet->setMdpUtilisateur(crypter($objet->getMdpUtilisateur()));
-			$requete = $db->prepare("UPDATE utilisateurs SET pseudoUtilisateur=:pseudoUtilisateur,mdpUtilisateur=:mdpUtilisateur,mailUtilisateur=:mailUtilisateur,nomUtilisateur=:nomUtilisateur,prenomUtilisateur=:prenomUtilisateur,adresseUtilisateur=:adresseUtilisateur,telUtilisateur=:telUtilisateur,idRole=:idRole,idPanier=:idPanier WHERE idUtilisateur=:idUtilisateur");
+			$requete = $db->prepare("UPDATE utilisateurs SET pseudoUtilisateur=:pseudoUtilisateur,mdpUtilisateur=:mdpUtilisateur,mailUtilisateur=:mailUtilisateur,nomUtilisateur=:nomUtilisateur,prenomUtilisateur=:prenomUtilisateur,adresseUtilisateur=:adresseUtilisateur,telUtilisateur=:telUtilisateur,idRole=:idRole WHERE idUtilisateur=:idUtilisateur");
 			$requete->bindValue(":pseudoUtilisateur", $objet->getPseudoUtilisateur());
 			$requete->bindValue(":mdpUtilisateur", $objet->getMdpUtilisateur());
 			$requete->bindValue(":mailUtilisateur", $objet->getMailUtilisateur());
