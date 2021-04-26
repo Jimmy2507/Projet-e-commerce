@@ -5,7 +5,7 @@
 		public static function add(Utilisateurs $objet){
 			$db = DbConnect::getDb();
 			$objet->setMdpUtilisateur(crypter($objet->getMdpUtilisateur()));
-			$requete = $db->prepare("INSERT INTO utilisateurs (pseudoUtilisateur,mdpUtilisateur,mailUtilisateur,nomUtilisateur,prenomUtilisateur,adresseUtilisateur,telUtilisateur,idRole,idPanier) VALUES (:pseudoUtilisateur,:mdpUtilisateur,:mailUtilisateur,:nomUtilisateur,:prenomUtilisateur,:adresseUtilisateur,:telUtilisateur,:idRole,:idPanier)");
+			$requete = $db->prepare("INSERT INTO utilisateurs (pseudoUtilisateur,mdpUtilisateur,mailUtilisateur,nomUtilisateur,prenomUtilisateur,adresseUtilisateur,telUtilisateur,idRole) VALUES (:pseudoUtilisateur,:mdpUtilisateur,:mailUtilisateur,:nomUtilisateur,:prenomUtilisateur,:adresseUtilisateur,:telUtilisateur,:idRole)");
 			$requete->bindValue(":pseudoUtilisateur", $objet->getPseudoUtilisateur());
 			$requete->bindValue(":mdpUtilisateur", $objet->getMdpUtilisateur());
 			$requete->bindValue(":mailUtilisateur", $objet->getMailUtilisateur());
@@ -14,14 +14,13 @@
 			$requete->bindValue(":adresseUtilisateur", $objet->getAdresseUtilisateur());
 			$requete->bindValue(":telUtilisateur", $objet->getTelUtilisateur());
 			$requete->bindValue(":idRole", $objet->getIdRole());
-			$requete->bindValue(":idPanier", $objet->getIdPanier());
 			$requete->execute();
 		}
 
 		public static function update(Utilisateurs $objet){
 			$db = DbConnect::getDb();
 			$objet->setMdpUtilisateur(crypter($objet->getMdpUtilisateur()));
-			$requete = $db->prepare("UPDATE utilisateurs SET pseudoUtilisateur=:pseudoUtilisateur,mdpUtilisateur=:mdpUtilisateur,mailUtilisateur=:mailUtilisateur,nomUtilisateur=:nomUtilisateur,prenomUtilisateur=:prenomUtilisateur,adresseUtilisateur=:adresseUtilisateur,telUtilisateur=:telUtilisateur,idRole=:idRole,idPanier=:idPanier WHERE idUtilisateur=:idUtilisateur");
+			$requete = $db->prepare("UPDATE utilisateurs SET pseudoUtilisateur=:pseudoUtilisateur,mdpUtilisateur=:mdpUtilisateur,mailUtilisateur=:mailUtilisateur,nomUtilisateur=:nomUtilisateur,prenomUtilisateur=:prenomUtilisateur,adresseUtilisateur=:adresseUtilisateur,telUtilisateur=:telUtilisateur,idRole=:idRole WHERE idUtilisateur=:idUtilisateur");
 			$requete->bindValue(":pseudoUtilisateur", $objet->getPseudoUtilisateur());
 			$requete->bindValue(":mdpUtilisateur", $objet->getMdpUtilisateur());
 			$requete->bindValue(":mailUtilisateur", $objet->getMailUtilisateur());
@@ -30,7 +29,6 @@
 			$requete->bindValue(":adresseUtilisateur", $objet->getAdresseUtilisateur());
 			$requete->bindValue(":telUtilisateur", $objet->getTelUtilisateur());
 			$requete->bindValue(":idRole", $objet->getIdRole());
-			$requete->bindValue(":idPanier", $objet->getIdPanier());
 			$requete->execute();
 		}
 
