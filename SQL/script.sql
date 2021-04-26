@@ -69,4 +69,4 @@ ALTER TABLE paniers ADD CONSTRAINT paniers_produits_FK FOREIGN KEY (idProduit) R
 
 INSERT INTO roles VALUES (null,'Administrateur');
 INSERT INTO roles VALUES (null,'Utilisateur');
-INSERT INTO utilisateurs VALUES (null,'admin','e45d0cb04a082cc30a6d5aaa7df4f617','admin@admin.fr','admin','admin','161 rue des Admins','0700000000',1);
+INSERT INTO utilisateurs VALUES (null,'admin','66009c4fc388c3326c50f8677d6af203','admin@admin.fr','admin','admin','161 rue des Admins','0700000000',1);

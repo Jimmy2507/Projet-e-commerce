@@ -58,6 +58,39 @@ main{
     background-color: #4a4a4a;
 }
 
+.imageProduit, .cadreDescription, .cadrePrix{
+    padding: 5px;
+}
+
+.imageProduit{
+    flex:2;
+}
+
+.imageProduit img{
+    width: 100%;
+}
+
+.cadreDescription{
+    flex:2;
+}
+
+.cadrePrix{
+    background-color: #001e69;
+}
+
+.prixProduit{
+    font-size: 2.5em;
+    justify-content: center;
+}
+
+.boutonPanier{
+    background-color: goldenrod;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2em;
+    font-weight: bold;
+}
+
 footer{
     background-color:#0a3782;
     padding: 2vh;
@@ -79,4 +112,9 @@ i{
 .espaceH{
     flex:none;
     height: 3vh;
+}
+
+.centreHV{
+    justify-content: center;
+    align-items: center;
 }
