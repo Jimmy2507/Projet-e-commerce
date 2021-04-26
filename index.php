@@ -14,7 +14,12 @@
 
 
             //Formulaires
+            'formInscription'=>['PHP/vue/','formInscription','xx'],
+            'formInscription'=>['PHP/vue/','formInscription','xx'],
 
+            //Action
+            'actionInscription'=>['PHP/vue/','actionInscription','xx'],
+            'actionConnexion'=>['PHP/vue/','actionConnexion','xx'],
     ];    
 
     if (isset($_GET['page'])){

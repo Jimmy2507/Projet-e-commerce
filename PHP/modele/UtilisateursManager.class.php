@@ -14,7 +14,6 @@
 			$requete->bindValue(":adresseUtilisateur", $objet->getAdresseUtilisateur());
 			$requete->bindValue(":telUtilisateur", $objet->getTelUtilisateur());
 			$requete->bindValue(":idRole", $objet->getIdRole());
-			$requete->bindValue(":idPanier", $objet->getIdPanier());
 			$requete->execute();
 		}
 
@@ -30,7 +29,6 @@
 			$requete->bindValue(":adresseUtilisateur", $objet->getAdresseUtilisateur());
 			$requete->bindValue(":telUtilisateur", $objet->getTelUtilisateur());
 			$requete->bindValue(":idRole", $objet->getIdRole());
-			$requete->bindValue(":idPanier", $objet->getIdPanier());
 			$requete->execute();
 		}
 

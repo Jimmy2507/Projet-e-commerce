@@ -14,11 +14,11 @@ function chargerPage($tab){
     $nom = $tab[1];
     $titre = $tab[2];
 
-    include 'PHP/VIEW/Head.php';
-    include 'PHP/VIEW/Header.php';
-    include 'PHP/VIEW/Nav.php';
+    include 'PHP/vue/head.php';
+    include 'PHP/vue/header.php';
+    include 'PHP/vue/nav.php';
     include $chemin . $nom . '.php'; //Chargement de la page en fonction du chemin et du nom
-    include 'PHP/VIEW/Footer.php';
+    include 'PHP/vue/footer.php';
 }
 
 function crypter($mdp){
