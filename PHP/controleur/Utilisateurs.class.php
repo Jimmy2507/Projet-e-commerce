@@ -4,6 +4,7 @@
 
 		/* ****************Attributs***************** */
 
+		private $_idUtilisateur;
 		private $_pseudoUtilisateur;
 		private $_mdpUtilisateur;
 		private $_mailUtilisateur;
@@ -15,7 +16,15 @@
 		private $_idPanier;
 		
 		/* ****************Accesseurs***************** */
+		public function getIdUtilisateur()
+		{
+				return $this->_idUtilisateur;
+		}
 		
+		public function setIdUtilisateur($idUtilisateur)
+		{
+				$this->_idUtilisateur = $idUtilisateur;
+		}
 		public function setPseudoUtilisateur($_pseudoUtilisateur){
 			$this->_pseudoUtilisateur = $_pseudoUtilisateur;
 		}
@@ -141,6 +150,8 @@
             return 0;
         }
         
+
+
 	}
 
 ?>
