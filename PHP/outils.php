@@ -10,9 +10,9 @@ function chargerClasse($classe){
 }
 
 function chargerPage($tab){
-    $chemin = $page[0];
-    $nom = $page[1];
-    $titre = $page[2];
+    $chemin = $tab[0];
+    $nom = $tab[1];
+    $titre = $tab[2];
 
     include 'PHP/VIEW/Head.php';
     include 'PHP/VIEW/Header.php';
