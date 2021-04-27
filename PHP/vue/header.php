@@ -51,10 +51,10 @@
                             echo'<div><a href="?page=nousContacte">Nous contacter</a></div>';
                         
                         if(isset($_SESSION['LDHA_utilisateur'])){
-                            echo'<div><a href="?page=formCompte">Mon compte</a></div>';
+                            echo'<div><a href="?page=formCompte">Mon compte</a></div>
+                            <div><a href="?page=panier">Panier</a></div>';
                         }
                     ?>
-                    <div><a href="?page=panier">Panier</a></div>
                 </div><div class="espaceV1"></div>
             </div>
         </nav>
