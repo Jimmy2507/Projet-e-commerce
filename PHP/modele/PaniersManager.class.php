@@ -4,8 +4,8 @@
 
 		public static function add(Paniers $objet){
 			$db = DbConnect::getDb();
-			$requete = $db->prepare("INSERT INTO paniers (idPanier,idProduit,qteProduit) VALUES (:idPanier,:idProduit,:qteProduit)");
-			$requete->bindValue(":idPanier", $objet->getIdPanier());
+			$requete = $db->prepare("INSERT INTO paniers (idUtilisateur,idProduit,qteProduit) VALUES (:idUtilisateur,:idProduit,:qteProduit)");
+			$requete->bindValue(":idUtilisateur", $objet->getIdUtilisateur());
 			$requete->bindValue(":idProduit", $objet->getIdProduit());
 			$requete->bindValue(":qteProduit", $objet->getQteProduit());
 			$requete->execute();
@@ -13,8 +13,9 @@
 
 		public static function update(Paniers $objet){
 			$db = DbConnect::getDb();
-			$requete = $db->prepare("UPDATE paniers SET idPanier=:idPanier,idProduit=:idProduit,qteProduit=:qteProduit WHERE idPanier=:idPanier");
+			$requete = $db->prepare("UPDATE paniers SET idUtilisateur=:idUtilisateur,idProduit=:idProduit,qteProduit=:qteProduit WHERE idPanier=:idPanier");
 			$requete->bindValue(":idPanier", $objet->getIdPanier());
+			$requete->bindValue(":idUtilisateur", $objet->getIdUtilisateur());
 			$requete->bindValue(":idProduit", $objet->getIdProduit());
 			$requete->bindValue(":qteProduit", $objet->getQteProduit());
 			$requete->execute();
@@ -47,6 +48,22 @@
 					$liste[] = new Paniers($donnees);
 				}
 			}return $liste;
+		}
+
+		public static function findByUtilisateur($id){
+			$db = DbConnect::getDb();
+			$id = (int) $id;
+			$requete = $db->query("SELECT * FROM paniers WHERE idUtilisateur =".$id);
+			while ($donnees = $requete->fetch(PDO::FETCH_ASSOC)){
+				if ($donnees <> false){
+					$liste[] = new Paniers($donnees);
+				}
+			}
+			if(!empty($liste)){
+				return $liste;
+			}else{
+				return false;
+			}
 		}
 
 	}

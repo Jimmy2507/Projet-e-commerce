@@ -9,7 +9,7 @@ if($_GET["mode"] == "modifier"){
 $u = new Produits($_POST);
 
 if($_GET["mode"] == "ajouter" || $_GET["mode"] == "modifier"){ //Définition des variables de l'image en cas d'ajout ou de modification de l'utilisateur
-        $leNom = uniqid('uti_') . '.'.explode("/",$_FILES['imageProduit']['type'])[1];
+        $leNom = uniqid('prd_') . '.'.explode("/",$_FILES['imageProduit']['type'])[1];
         move_uploaded_file($_FILES['imageProduit']['tmp_name'],"IMG/".$leNom);
         $u->setImageProduit("IMG/".$leNom);
     }

@@ -125,13 +125,20 @@ main{
 
 .boutonPanier{
     background-color: goldenrod;
-    justify-content: center;
+    text-align: center;
     align-items: center;
     border-radius: 2em;
     font-weight: bold;
     width: 90%;
     align-self: center;
     padding: 1vh;
+}
+
+.boutonPanier a{
+    color: white;
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
 }
 
 .cadreProduit{
@@ -163,6 +170,15 @@ main{
 }
 .cadreProduitPrix{
     justify-content: center;
+}
+
+.cadreQuantite{
+    justify-content: center;
+}
+
+.cadrePanier img{
+    width: auto;
+    height: 15vh;
 }
 
 footer{

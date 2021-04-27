@@ -16,6 +16,7 @@
             'listeCategories'=>['PHP/vue/','listeCategories','Liste des produits'],
             'listeUtilisateurs'=>['PHP/vue/','listeUtilisateurs','Liste des Utilisateur'],
             'catalogue'=>['PHP/vue/','catalogueProduits','Catalogue des produits'],
+            'panier'=>['PHP/vue/','panier','Votre panier'],
 
             //Formulaires
             'formInscription'=>['PHP/vue/','formInscription','Inscription'],
@@ -30,6 +31,7 @@
             'actionProduits'=>['PHP/vue/','actionProduits','xx'],
             'actionCategorie'=>['PHP/vue/','actionCategorie','xx'],
             'actionUtilisateurs'=>['PHP/vue/','actionUtilisateurs','xx'],
+            'actionPaniers'=>['PHP/vue/','actionPaniers','xx'],
     ];    
 
     Parametres::init();
