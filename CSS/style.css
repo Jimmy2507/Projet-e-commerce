@@ -57,7 +57,7 @@ input[type=search]{
 }
 
 nav{
-    background-color: #001e69;
+    background-color: #001e69;z-index: 1;
 }
 
 nav a{
@@ -65,6 +65,26 @@ nav a{
     color: white;
     font-weight: bold;
     padding: 1em;
+    width: 100%;
+    text-align: center;
+}
+
+.menuProduits{
+    position: relative;
+    
+}
+
+.menuProduits:hover .sousMenu{
+    display: flex;
+    position: absolute;
+    
+}
+.sousMenu{
+    display:none;
+    padding-top: 3em;
+    background-color: #0a3782;
+    width: 100%;
+    z-index: -1;
 }
 
 .centre{

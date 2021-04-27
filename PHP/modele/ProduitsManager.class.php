@@ -57,4 +57,17 @@
 			}return $liste;
 		}
 
+		public static function findByCategorie($id){
+			$db = DbConnect::getDb();
+			$id = (int) $id;
+			$requete = $db->query("SELECT * FROM produits WHERE idCategorie =".$id);
+			$resultats = $requete->fetch(PDO::FETCH_ASSOC);
+			if ($resultats <> false){
+				return new Produits($resultats);
+			}
+			else{
+				return false;
+			}
+		}
+
 	}

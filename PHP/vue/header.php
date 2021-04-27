@@ -29,9 +29,18 @@
             <div>
                 <div class="espaceV1"></div>
                 <div class="centre">
-                    <div class="bleu"><a href="">Tous nos produits</a></div>
+                    <div class="menuProduits bleu"><a href="">Tous nos produits</a>
+                        <div class="sousMenu colonne">
+                            <?php
+                                $tab=CategoriesManager::getList();
+                                foreach($tab as $categorie){
+                                    echo '<a href="?page=catalogue&id='.$categorie->getIdCategorie().'">'.$categorie->getNomCategorie().'</a>';
+                                }
+                            ?>
+                        </div>
+                    </div>
                     <div><a href="?page=listeProduits">Gestion articles</a></div>
-                    <div><a href="?page=listeCategories">Gestion Categories</a></div>
+                    <div><a href="?page=listeCategories">Gestion catégories</a></div>
                 </div><div class="espaceV1"></div>
             </div>
         </nav>
