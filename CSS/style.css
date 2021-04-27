@@ -43,7 +43,6 @@ nav{
 }
 
 nav a{
-    flex:3;
     text-decoration: none;
     color: white;
     font-weight: bold;
@@ -59,7 +58,7 @@ main{
 }
 
 .imageProduit, .cadreDescription, .cadrePrix{
-    padding: 5px;
+    margin: 1%;
 }
 
 .imageProduit{
@@ -68,14 +67,17 @@ main{
 
 .imageProduit img{
     width: 100%;
+    height: fit-content;
 }
 
 .cadreDescription{
-    flex:2;
+    flex:3;
+    text-align: justify;
 }
 
 .cadrePrix{
     background-color: #001e69;
+    flex:1.5;
 }
 
 .prixProduit{
@@ -89,6 +91,8 @@ main{
     align-items: center;
     border-radius: 2em;
     font-weight: bold;
+    width: 90%;
+    align-self: center;
 }
 
 footer{
@@ -117,4 +121,8 @@ i{
 .centreHV{
     justify-content: center;
     align-items: center;
+}
+
+.bleu{
+    background-color: #0096c8;
 }

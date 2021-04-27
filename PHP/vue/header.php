@@ -19,9 +19,12 @@
             <div class="espaceV1"></div>
         </header>
         <nav>
-            <div class="centre">
-                <a href=""><div>Tous nos produits</div></a>
-                <a href="?page=listeProduits"><div>Gestion Article</div></a>
+            <div>
+                <div class="espaceV1"></div>
+                <div class="centre">
+                    <div class="bleu"><a href="">Tous nos produits</a></div>
+                    <div><a href="?page=listeProduits">Gestion articles</a></div>
+                </div><div class="espaceV1"></div>
             </div>
         </nav>
         <main class="colonne">
