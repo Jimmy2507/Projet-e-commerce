@@ -19,11 +19,13 @@
             'formInscription'=>['PHP/vue/','formInscription','Inscription'],
             'formConnexion'=>['PHP/vue/','formConnexion','Connexion'],
             'formGestionProduits'=>['PHP/vue/','formGestionProduits','Gestion des produits'],
+            'formGestionCategorie'=>['PHP/vue/','formGestionCategorie','Gestion des categories'],
             //Action
             'actionInscription'=>['PHP/vue/','actionInscription','xx'],
             'actionConnexion'=>['PHP/vue/','actionConnexion','xx'],
             'actionDeconnexion'=>['PHP/vue/','actionDeconnexion','xx'],
-            'actionProduits'=>['PHP/vue/','actionProduits','xx']
+            'actionProduits'=>['PHP/vue/','actionProduits','xx'],
+            'actionCategorie'=>['PHP/vue/','actionCategorie','xx']
     ];    
 
     Parametres::init();
