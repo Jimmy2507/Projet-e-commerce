@@ -81,10 +81,14 @@ nav a{
 }
 .sousMenu{
     display:none;
-    padding-top: 3em;
+    padding-top: 3.2em;
     background-color: #0a3782;
     width: 100%;
     z-index: -1;
+}
+
+.sousMenu a{
+    padding: 1em 0;
 }
 
 .centre{
@@ -176,9 +180,13 @@ main{
     justify-content: center;
 }
 
+.cadrePanier{
+    border: 1px solid white;
+}
+
 .cadrePanier img{
     width: auto;
-    height: 15vh;
+    height: 10vh;
 }
 
 footer{

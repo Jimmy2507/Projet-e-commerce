@@ -17,7 +17,7 @@ if(isset($_GET["id"])){
                 <div class="prixProduit flexNone">'.
                 $produit->getPrixProduit()
             .'€</div>
-                <div class="boutonPanier flexNone"><a href="?page=actionPaniers&id='.$produit->getIdProduit().'&mode=ajouter">AJOUTER AU PANIER</a></div>
+                <div class="boutonPanier flexNone"><a href="?page=actionPaniers&idPr='.$produit->getIdProduit().'&mode=ajouter">AJOUTER AU PANIER</a></div>
                 <div class="centreHV flexNone">Disponibilité : ';
                 if($produit->getStockProduit() > 0){
                     echo "En stock";

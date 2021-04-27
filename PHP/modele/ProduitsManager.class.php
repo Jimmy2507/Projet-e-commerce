@@ -65,7 +65,11 @@
 				if ($donnees <> false){
 					$liste[] = new Produits($donnees);
 				}
-			}return $liste;
+			}if(!empty($liste)){
+				return $liste;
+			}else{
+				return false;
+			}
 		}
 
 	}
