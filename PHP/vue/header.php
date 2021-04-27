@@ -40,8 +40,8 @@
                         </div>
                     </div>
                     <div><a href="?page=listeProduits">Gestion articles</a></div>
-                    <div><a href="?page=listeCategories">Gestion Categories</a></div>
-                    <div><a href="?page=listeUtilisateurs">Gestion Utilisateurs</a></div>
+                    <div><a href="?page=listeCategories">Gestion catégories</a></div>
+                    <div><a href="?page=listeUtilisateurs">Gestion utilisateurs</a></div>
                 </div><div class="espaceV1"></div>
             </div>
         </nav>

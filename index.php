@@ -15,6 +15,7 @@
             'listeProduits'=>['PHP/vue/','listeProduits','Liste des produits'],
             'listeCategories'=>['PHP/vue/','listeCategories','Liste des produits'],
             'listeUtilisateurs'=>['PHP/vue/','listeUtilisateurs','Liste des Utilisateur'],
+            'catalogue'=>['PHP/vue/','catalogueProduits','Catalogue des produits'],
 
             //Formulaires
             'formInscription'=>['PHP/vue/','formInscription','Inscription'],
