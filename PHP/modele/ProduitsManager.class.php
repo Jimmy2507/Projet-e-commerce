@@ -4,25 +4,27 @@
 
 		public static function add(Produits $objet){
 			$db = DbConnect::getDb();
-			$requete = $db->prepare("INSERT INTO produits (idProduit,nomProduit,prixProduit,imageProduit,descProduit,stockProduit) VALUES (:idProduit,:nomProduit,:prixProduit,:imageProduit,:descProduit,:stockProduit)");
+			$requete = $db->prepare("INSERT INTO produits (idProduit,nomProduit,prixProduit,imageProduit,descProduit,stockProduit,idCategorie) VALUES (:idProduit,:nomProduit,:prixProduit,:imageProduit,:descProduit,:stockProduit,:idCategorie)");
 			$requete->bindValue(":idProduit", $objet->getIdProduit());
 			$requete->bindValue(":nomProduit", $objet->getNomProduit());
 			$requete->bindValue(":prixProduit", $objet->getPrixProduit());
 			$requete->bindValue(":imageProduit", $objet->getImageProduit());
 			$requete->bindValue(":descProduit", $objet->getDescProduit());
 			$requete->bindValue(":stockProduit", $objet->getStockProduit());
+			$requete->bindValue(":idCategorie", $objet->getIdCategorie());
 			$requete->execute();
 		}
 
 		public static function update(Produits $objet){
 			$db = DbConnect::getDb();
-			$requete = $db->prepare("UPDATE produits SET idProduit=:idProduit,nomProduit=:nomProduit,prixProduit=:prixProduit,imageProduit=:imageProduit,descProduit=:descProduit,stockProduit=:stockProduit WHERE idProduit=:idProduit");
+			$requete = $db->prepare("UPDATE produits SET idProduit=:idProduit,nomProduit=:nomProduit,prixProduit=:prixProduit,imageProduit=:imageProduit,descProduit=:descProduit,stockProduit=:stockProduit,idCategorie=:idCategorie WHERE idProduit=:idProduit");
 			$requete->bindValue(":idProduit", $objet->getIdProduit());
 			$requete->bindValue(":nomProduit", $objet->getNomProduit());
 			$requete->bindValue(":prixProduit", $objet->getPrixProduit());
 			$requete->bindValue(":imageProduit", $objet->getImageProduit());
 			$requete->bindValue(":descProduit", $objet->getDescProduit());
 			$requete->bindValue(":stockProduit", $objet->getStockProduit());
+			$requete->bindValue(":idCategorie", $objet->getIdCategorie());
 			$requete->execute();
 		}
 

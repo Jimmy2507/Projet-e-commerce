@@ -10,7 +10,6 @@
             'compte'=>['PHP/vue/','compte','Mon compte'],
             'produit'=>['PHP/vue/','produit','Nom de l\'article'],
             '404'=>['PHP/vue/','404','Erreur 404'],
-            'test'=>['PHP/vue/','test','TEST'],
             //Listes
             'listeProduits'=>['PHP/vue/','listeProduits','Liste des produits'],
             'listeCategories'=>['PHP/vue/','listeCategories','Liste des produits'],

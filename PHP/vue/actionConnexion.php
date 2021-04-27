@@ -6,7 +6,7 @@ if ($uti != false)
     {
         echo 'connexion reussie';
         $_SESSION['LDHA_utilisateur']=$uti;
-        header("refresh:1;url=?page=test");
+        header("refresh:1;url=?page=default");
     }
     else
     {
