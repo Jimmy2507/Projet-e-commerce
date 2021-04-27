@@ -38,6 +38,24 @@ header a{
     font-size: 0.7em;
 }
 
+.recherche{
+    flex:3;
+    justify-content: center;
+}
+
+.recherche form{
+    width: 100%;
+}
+
+input[type=search]{
+    height: 60%;
+    width: 80%;
+}
+
+.boutonRecherche{
+    height: 60%;
+}
+
 nav{
     background-color: #001e69;
 }

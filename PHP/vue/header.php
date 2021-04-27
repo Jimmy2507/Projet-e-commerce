@@ -8,6 +8,13 @@
                     <div class="texteLogo">HIGH-TECH EXPERIENCE</div></a>
                 </div>
                 <div class="espaceV1"></div>
+                <div class="recherche">
+                    <form method="GET">
+                        <input type="search" name="recherche" placeholder="Recherche de produit" />
+                        <button class="boutonRecherche" type="submit"><i class="fas fa-search"></i></button>
+                    </form>
+                </div>
+                <div class="espaceV1"></div>
                 <?php
                     if(isset($_SESSION["LDHA_utilisateur"])){
                     echo "<a href='?page=actionDeconnexion'><div class='icones'><i class='fas fa-key'></i>Déconnexion</div></a>";
