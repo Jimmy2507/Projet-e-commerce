@@ -64,5 +64,5 @@ if($mode != "detail"){
 
 // dans tous les cas, on met le bouton annuler
 ?>
-    <a href="?page=listeUtilisateurs" class=" crudBtn crudBtnRetour">Annuler</a>
+    <a href="?page=listeUtilisateurs" class="Retour">Annuler</a>
 </form>

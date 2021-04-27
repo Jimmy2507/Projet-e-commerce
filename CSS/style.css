@@ -198,6 +198,9 @@ i{
 .espaceV1{
     flex:1;
 }
+.espaceV2{
+    flex: 2;
+}
 
 .espaceH{
     flex:none;
@@ -213,8 +216,67 @@ i{
     background-color: #0096c8;
 }
 
+.trait{
+    background-color: rgb(41, 44, 46);
+    width: 100%;
+    height: 1px;
+    margin: 25px 0;
+}
+.Block{
+    align-items: center;
+    text-align: center;
+}
+.sousBlock{
+    align-items: center;
+    text-align: center;
+}
+.Boutton{
+    font-size: 16px;
+    text-transform: uppercase;
+    background: #0a3782;
+    border-radius: 40px;
+    padding: 10px 17px 9px;
+    transition: all .2s;
+    text-align: center;
+    font-weight: 600;
+    -webkit-appearance: none;
+    border: 0;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+.Boutton:hover{
+    color: #fff;
+    opacity: .9;
+    text-decoration: none;
+    outline: 0;
+    cursor: pointer;
+}
+
+.Boutton a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.Block input{
+    line-height: 25px;
+    border: 1px solid #e1e1e1;
+    padding: 0 15px;
+    font-size: 13px;
+    margin: 0 10px 10px 0;
+    width: 100%;
+    color: #282828;
+    position: relative;
+    transition: all .3s;
+    border-radius: 0;
+    -webkit-appearance: none;
+}
 .flexNone{
     flex:none;
     margin-top: 1vh;
     margin-bottom: 1vh;
+}
+.Retour{
+    color: white;
 }

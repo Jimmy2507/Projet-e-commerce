@@ -24,6 +24,7 @@
             'formGestionProduits'=>['PHP/vue/','formGestionProduits','Gestion des produits'],
             'formGestionCategorie'=>['PHP/vue/','formGestionCategorie','Gestion des categories'],
             'formGestionUtilisateur'=>['PHP/vue/','formGestionUtilisateur','Gestion des utilisateurs'],
+            'formCompte'=>['PHP/vue/','formCompte','Mon compte'],
             //Action
             'actionInscription'=>['PHP/vue/','actionInscription','xx'],
             'actionConnexion'=>['PHP/vue/','actionConnexion','xx'],
@@ -32,6 +33,7 @@
             'actionCategorie'=>['PHP/vue/','actionCategorie','xx'],
             'actionUtilisateurs'=>['PHP/vue/','actionUtilisateurs','xx'],
             'actionPaniers'=>['PHP/vue/','actionPaniers','xx'],
+            'actionChangementMdp'=>['PHP/vue/','actionChangementMdp','xx'],
     ];    
 
     Parametres::init();
