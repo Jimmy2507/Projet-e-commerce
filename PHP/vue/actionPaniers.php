@@ -4,11 +4,14 @@ if($_GET["mode"]=="ajouter"){
     $tab=["idUtilisateur"=>$_SESSION["LDHA_utilisateur"]->getIdUtilisateur(),"idProduit"=>$_GET["idPr"],"qteProduit"=>1];//Si ajout nouveau produit, pas d'idPanier
 
     $liste=PaniersManager::findByUtilisateur($_SESSION["LDHA_utilisateur"]->getIdUtilisateur());//Mais on vérifie qu'il n'a pas déjà l'article dans son panier
-    foreach($liste as $panier){
-        if($panier->getIdUtilisateur()==$_SESSION["LDHA_utilisateur"]->getIdUtilisateur() && $panier->getIdProduit() == $_GET["idPr"]){//Sinon on augmente la quantité au lieu d'ajouter un panier
-            $tab["idPanier"] = $panier->getIdPanier();//On récupère l'id du panier
-            $_GET["mode"]="modifier";//On modifie au lieu d'ajouter
-            $tab["qteProduit"]++;//On incrémente la quantité
+    if($liste){
+        foreach($liste as $panier){
+            if($panier->getIdUtilisateur()==$_SESSION["LDHA_utilisateur"]->getIdUtilisateur() && $panier->getIdProduit() == $_GET["idPr"]){//Sinon on augmente la quantité au lieu d'ajouter un panier
+                $tab["idPanier"] = $panier->getIdPanier();//On récupère l'id du panier
+                $_GET["mode"]="modifier";//On modifie au lieu d'ajouter
+                $tab["qteProduit"] = $panier->getQteProduit() + 1;//On incrémente la quantité
+                break;
+            }
         }
     }
 }else{
