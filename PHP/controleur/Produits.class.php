@@ -10,6 +10,7 @@
 		private $_imageProduit;
 		private $_descProduit;
 		private $_stockProduit;
+		private $_idCategorie;
 		
 		/* ****************Accesseurs***************** */
 		
@@ -59,6 +60,14 @@
 
 		public function getStockProduit(){
 			return $this->_stockProduit;
+		}
+
+		public function setIdCategorie($_idCategorie){
+			$this->_idCategorie = $_idCategorie;
+		}
+
+		public function getIdCategorie(){
+			return $this->_idCategorie;
 		}
 
 		/* ****************Constructeur***************** */
