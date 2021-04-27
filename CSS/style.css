@@ -131,6 +131,38 @@ main{
     font-weight: bold;
     width: 90%;
     align-self: center;
+    padding: 1vh;
+}
+
+.cadreProduit{
+    border: 1px solid white;
+    color: white;
+    text-decoration: none;
+}
+
+/* .cadreProduit a{
+    display: flex;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+} */
+
+.cadreProduit img{
+    width: auto;
+    height: 15vh;
+}
+
+.cadreProduitImage{
+    justify-content: center;
+    background-color: white;
+}
+
+.cadreProduitNom{
+    flex:2;
+    justify-content: center;
+}
+.cadreProduitPrix{
+    justify-content: center;
 }
 
 footer{
@@ -168,6 +200,7 @@ i{
     background-color: #0096c8;
 }
 
+<<<<<<< HEAD
 .trait{
     background-color: rgb(41, 44, 46);
     width: 100%;
@@ -223,4 +256,10 @@ i{
     transition: all .3s;
     border-radius: 0;
     -webkit-appearance: none;
+=======
+.flexNone{
+    flex:none;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+>>>>>>> f66c7100ed0aa8500a23a18cdaf81bc08d1fc9e0
 }

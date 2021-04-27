@@ -14,11 +14,11 @@ if(isset($_GET["id"])){
                 $produit->getDescProduit()
             .'</div>
             <div class="cadrePrix colonne">
-                <div class="prixProduit">'.
+                <div class="prixProduit flexNone">'.
                 $produit->getPrixProduit()
             .'€</div>
-                <div class="boutonPanier">AJOUTER AU PANIER</div>
-                <div class="centreHV">Disponibilité : ';
+                <div class="boutonPanier flexNone">AJOUTER AU PANIER</div>
+                <div class="centreHV flexNone">Disponibilité : ';
                 if($produit->getStockProduit() > 0){
                     echo "En stock";
                 }else{

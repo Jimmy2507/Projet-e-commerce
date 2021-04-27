@@ -39,9 +39,15 @@
                             ?>
                         </div>
                     </div>
-                    <div><a href="?page=listeProduits">Gestion articles</a></div>
-                    <div><a href="?page=listeCategories">Gestion catégories</a></div>
-                    <div><a href="?page=listeUtilisateurs">Gestion utilisateurs</a></div>
+                    <?php
+                    if(isset($_SESSION["LDHA_utilisateur"])){
+                        if($_SESSION["LDHA_utilisateur"]->getIdRole()==1){
+                            echo '<div><a href="?page=listeProduits">Gestion articles</a></div>
+                            <div><a href="?page=listeCategories">Gestion catégories</a></div>
+                            <div><a href="?page=listeUtilisateurs">Gestion utilisateurs</a></div>';
+                        }
+                    }
+                    ?>
                 </div><div class="espaceV1"></div>
             </div>
         </nav>
