@@ -49,7 +49,7 @@
                     }
                     ?>
                     <div><a href="?page=listeCategories">Nous contacter</a></div>
-                    <div><a href="?page=listeCategories">Mon compte</a></div>
+                    <div><a href="?page=formCompte">Mon compte</a></div>
                     <div><a href="?page=listeCategories">Panier</a></div>
                 </div><div class="espaceV1"></div>
             </div>

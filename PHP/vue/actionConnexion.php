@@ -10,10 +10,10 @@ if ($uti != false)
     else
     {
         echo 'le mot de passe est incorrect';
-        header("refresh:1;url=?page=connexion");
+        header("refresh:1;url=?page=formConnexion");
     }
 }else
 {
     echo "Le pseudo n'existe pas";
-    header("refresh:1;url=?page=connexion");
+    header("refresh:1;url=?page=formConnexion");
 }

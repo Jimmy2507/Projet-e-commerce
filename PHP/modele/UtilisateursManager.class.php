@@ -78,6 +78,12 @@
                 return false;
             }
         }
-
+		public static function updateMdp(Utilisateurs $obj,$mdp){
+            $db = DbConnect::getDb();
+            $q = $db->prepare("UPDATE utilisateurs SET mdpUtilisateur=:mdpUtilisateur WHERE idUtilisateur=:idUtilisateur");
+            $q->bindValue(":idUtilisateur", $obj->getIdUtilisateur());
+            $q->bindValue(":mdpUtilisateur", $mdp);
+            $q->execute();
+        }
 
 	}
