@@ -40,16 +40,20 @@
                         </div>
                     </div>
                     <?php
-                    if(isset($_SESSION["LDHA_utilisateur"])){
-                        if($_SESSION["LDHA_utilisateur"]->getIdRole()==1){
-                            echo '<div><a href="?page=listeProduits">Gestion articles</a></div>
-                            <div><a href="?page=listeCategories">Gestion catégories</a></div>
-                            <div><a href="?page=listeUtilisateurs">Gestion utilisateurs</a></div>';
+                        if(isset($_SESSION["LDHA_utilisateur"])){
+                            if($_SESSION["LDHA_utilisateur"]->getIdRole()==1){
+                                echo '<div><a href="?page=listeProduits">Gestion articles</a></div>
+                                <div><a href="?page=listeCategories">Gestion catégories</a></div>
+                                <div><a href="?page=listeUtilisateurs">Gestion utilisateurs</a></div>';
+                            }
                         }
-                    }
+                        
+                            echo'<div><a href="?page=nousContacte">Nous contacter</a></div>';
+                        
+                        if(isset($_SESSION['LDHA_utilisateur'])){
+                            echo'<div><a href="?page=formCompte">Mon compte</a></div>';
+                        }
                     ?>
-                    <div><a href="?page=listeCategories">Nous contacter</a></div>
-                    <div><a href="?page=formCompte">Mon compte</a></div>
                     <div><a href="?page=listeCategories">Panier</a></div>
                 </div><div class="espaceV1"></div>
             </div>
