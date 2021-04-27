@@ -131,6 +131,38 @@ main{
     font-weight: bold;
     width: 90%;
     align-self: center;
+    padding: 1vh;
+}
+
+.cadreProduit{
+    border: 1px solid white;
+    color: white;
+    text-decoration: none;
+}
+
+/* .cadreProduit a{
+    display: flex;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+} */
+
+.cadreProduit img{
+    width: auto;
+    height: 15vh;
+}
+
+.cadreProduitImage{
+    justify-content: center;
+    background-color: white;
+}
+
+.cadreProduitNom{
+    flex:2;
+    justify-content: center;
+}
+.cadreProduitPrix{
+    justify-content: center;
 }
 
 footer{
@@ -163,4 +195,10 @@ i{
 
 .bleu{
     background-color: #0096c8;
+}
+
+.flexNone{
+    flex:none;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
 }
