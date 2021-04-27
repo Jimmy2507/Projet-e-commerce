@@ -32,7 +32,7 @@ switch($mode){
 echo $sousTitre;
 echo '<form method="post" action="?page=actionUtilisateurs&mode=' . $mode . '" enctype="multipart/form-data">';
 if ($mode != "ajouter") {
-    echo '<input type="hidden" name="idProduit" value="' . $utilisateur->getIdUtilisateur() . '">';
+    echo '<input type="hidden" name="idUtilisateur" value="' . $utilisateur->getIdUtilisateur() . '">';
 }
 
 echo '
