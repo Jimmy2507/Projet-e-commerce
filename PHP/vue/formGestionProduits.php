@@ -6,6 +6,7 @@ if(isset($_GET['id'])){
 }else{
     $produit= new Produits();
 }
+$listeCategorie = CategoriesManager::getList();
 switch($mode){
     case "ajouter":
         $sousTitre ='<h5>Ajouter un nouveau produit</h5>';
@@ -19,13 +20,12 @@ switch($mode){
         break;
     case "supprimer":
         $sousTitre = '<h5>Supprimer un  utilisateur</h5>';
-        $dis = "";
+        $dis = "disabled";
         $submit = '<button>Supprimer</button>';
         break;
     case "detail":
         $sousTitre = '<h5>Détail du produit</h5>';
-        $dis = "";
-        $submit = '<button>Supprimer</button>';
+        $dis = "disabled";
         break;
 }
 
@@ -37,16 +37,34 @@ if ($mode != "ajouter") {
 
 echo '
     <input type="text" name="nomProduit" placeholder="Nom du produit" value="' . $produit->getNomProduit() . '" ' . $dis . '>
-    <input type="text" name="prixProduit" placeholder="Prix du Produit" value"'.$produit->getPrixProduit().'" '.$dis.'>
-    <input type ="text" name="descProduit" placeholder="Description" value"'.$produit->getDescProduit().'"'.$dis.'>
+    <input type="text" name="prixProduit" placeholder="Prix du Produit" value="'.$produit->getPrixProduit().'" '.$dis.'>
+    <input type ="text" name="stockProduit" placeholder="Stock" value="'.$produit->getStockProduit().'" '.$dis.'>
+    <textarea name="descProduit" '.$dis.'>'.$produit->getDescProduit().'</textarea>
     ';
         if ($_GET["mode"] == "ajouter" || $_GET["mode"] == "modifier"){
             echo '
-            <label for="imageUtilisateur">Image : </label>
+            <label for="imageProduit">Image : </label>
             <input type="file" name="imageProduit">';
         }
 
-echo $submit;
+
+    echo '<select name= "idCategorie">';
+        foreach ($listeCategorie as $c) {
+            if ($_GET["mode"]!="ajouter") {
+                $sel="";
+                if ($c->getIdCategorie()==$produit->getIdCategorie()){
+                    $sel="selected";
+                }
+            }
+            echo '<option value ="'.$c->getIdCategorie().'"'.$sel.$dis.'>'.$c->getNomCategorie().'</option>';
+        }
+        echo '</select>';
+
+
+if($mode != "detail"){
+    echo $submit;
+}
+
 // dans tous les cas, on met le bouton annuler
 ?>
     <a href="?page=listeProduits" class=" crudBtn crudBtnRetour">Annuler</a>
