@@ -95,6 +95,10 @@ nav a{
     flex:4;
 }
 
+.imageAccueil img{
+    width: 66vw;
+}
+
 main{
     background-color: #4a4a4a;
 }

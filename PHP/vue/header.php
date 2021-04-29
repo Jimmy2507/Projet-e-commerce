@@ -42,9 +42,9 @@
                     <?php
                         if(isset($_SESSION["LDHA_utilisateur"])){
                             if($_SESSION["LDHA_utilisateur"]->getIdRole()==1){
-                                echo '<div><a href="?page=listeProduits">Gestion articles</a></div>
-                                <div><a href="?page=listeCategories">Gestion catégories</a></div>
-                                <div><a href="?page=listeUtilisateurs">Gestion utilisateurs</a></div>';
+                                echo '<div><a href="?page=listeProduits">Articles</a></div>
+                                <div><a href="?page=listeCategories">Catégories</a></div>
+                                <div><a href="?page=listeUtilisateurs">Utilisateurs</a></div>';
                             }
                         }
                         
