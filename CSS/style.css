@@ -103,6 +103,10 @@ main{
     background-color: #4a4a4a;
 }
 
+.imageFormProduit img{
+    width: 10vw;
+}
+
 .imageProduit, .cadreDescription, .cadrePrix{
     margin: 1%;
 }
@@ -212,6 +216,11 @@ i{
 }
 .espaceV2{
     flex: 2;
+}
+
+.petitEspaceH{
+    flex:none;
+    height: 1vh;
 }
 
 .espaceH{

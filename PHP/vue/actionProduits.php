@@ -1,8 +1,8 @@
 <?php
-$erreur =false;
-var_dump($_POST);
-var_dump($_FILES);//A VOIR S'IL NE FAUT PAS UTILISER FILES CAR CA N'A PAS L'AIR D'ÊTRE DANS POST
-if($_GET["mode"] == "modifier" && isset($_POST["imageProduit"])){
+
+// var_dump($_POST);
+// var_dump($_FILES);
+if($_GET["mode"] == "modifier" && $_FILES["imageProduit"]["name"] <> ""){
     $pdt = ProduitsManager::findById($_POST["idProduit"]);
     $image = $pdt->getImageProduit();
     unlink($image);
@@ -16,7 +16,7 @@ if($_GET["mode"] == "ajouter"){ //Définition des variables de l'image en cas d'
     $u->setImageProduit("IMG/".$leNom);
 }
 if($_GET["mode"] == "modifier"){
-    if(isset($_POST["imageProduit"])){
+    if($_FILES["imageProduit"]["name"] <> ""){
         $leNom = uniqid('prd_') . '.' .explode("/",$_FILES['imageProduit']['type'])[1];
         move_uploaded_file($_FILES['imageProduit']['tmp_name'],"IMG/".$leNom);
         $u->setImageProduit("IMG/".$leNom);
@@ -27,8 +27,8 @@ if($_GET["mode"] == "modifier"){
 }
 
 
-var_dump($_POST);
-var_dump($u);
+// var_dump($_POST);
+// var_dump($u);
 switch ($_GET['mode']) {
     case "ajouter":
         ProduitsManager::add($u);
@@ -46,5 +46,5 @@ switch ($_GET['mode']) {
         break;
 
 }
-// header("location:?page=listeProduits");
 
+header("location:?page=listeProduits");
