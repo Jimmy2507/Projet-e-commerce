@@ -16,5 +16,5 @@ if(!empty($listeProduits)){
     echo '</div></div></a>';
 }
 }else{
-    echo "Catégorie introuvable.";
+    echo "Nous n'avons pour l'instant aucun produit dans cette catégorie.";
 }

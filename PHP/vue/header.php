@@ -4,7 +4,7 @@
             <div class="espaceV1"></div>
             <div class="centre">
                 <div class="colonne">
-                    <a href="?page=default"><div class="logo">LD<span style="color:#0096c8;">HA</span></div>
+                    <a href="?page=accueil"><div class="logo">LD<span style="color:#0096c8;">HA</span></div>
                     <div class="texteLogo">HIGH-TECH EXPERIENCE</div></a>
                 </div>
                 <div class="espaceV1"></div>
