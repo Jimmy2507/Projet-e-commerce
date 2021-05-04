@@ -11,3 +11,4 @@ $_POST["idRole"] = 1;
     }else{
         echo "Le pseudo existe deja";
     }
+header("location:?page=formConnexion");
