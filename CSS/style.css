@@ -95,8 +95,16 @@ nav a{
     flex:4;
 }
 
+.imageAccueil img{
+    width: 66vw;
+}
+
 main{
     background-color: #4a4a4a;
+}
+
+.imageFormProduit img{
+    width: 10vw;
 }
 
 .imageProduit, .cadreDescription, .cadrePrix{
@@ -120,6 +128,7 @@ main{
 .cadrePrix{
     background-color: #001e69;
     flex:1.5;
+    height: fit-content;
 }
 
 .prixProduit{
@@ -195,10 +204,6 @@ footer{
     justify-content: center;
 }
 
-/* .jaune{
-    background-color: rgb(249,201,79);
-} */
-
 i{
     padding-right: 1vw;
 }
@@ -208,6 +213,11 @@ i{
 }
 .espaceV2{
     flex: 2;
+}
+
+.petitEspaceH{
+    flex:none;
+    height: 1vh;
 }
 
 .espaceH{

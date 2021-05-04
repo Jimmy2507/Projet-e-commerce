@@ -1,1 +1,1 @@
-<h1>Coucou</h1>
+<div class="imageAccueil"><img src="IMG/imageAccueil.jpg" alt="image accueil"></div>

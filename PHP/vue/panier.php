@@ -1,6 +1,7 @@
 <?php
 
 $listePaniers = PaniersManager::findByUtilisateur($_SESSION["LDHA_utilisateur"]->getIdUtilisateur());
+$total = 0;
 
 if($listePaniers){
     foreach($listePaniers as $panier){
@@ -11,8 +12,22 @@ if($listePaniers){
     <div class="cadreQuantite centreHV">Quantité : '.$panier->getQteProduit().'</div>
     <div class="cadreProduitPrix centreHV">'.$produit->getPrixProduit().'€</div>
     <button><a href="?page=actionPaniers&idPa='.$panier->getIdPanier().'&idPr='.$panier->getIdProduit().'&mode=supprimer">Supprimer</a></button></div>';
-    }
+    $total += ($produit->getPrixProduit() * $panier->getQteProduit());
+}
 }else{
     echo "Panier vide !";
 }
 
+echo '
+<div class="petitEspaceH"></div>
+<div>
+    <div class="centre"></div>
+    <div class="bouton">
+    <div class="centreHV prixTotal">
+        Total : '.$total.' €
+    </div>
+    <button class="Boutton"><a href="?page=accueil">Commander</a></button>
+    </div>
+</div>';
+
+?>

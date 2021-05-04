@@ -4,7 +4,7 @@
             <div class="espaceV1"></div>
             <div class="centre">
                 <div class="colonne">
-                    <a href="?page=default"><div class="logo">LD<span style="color:#0096c8;">HA</span></div>
+                    <a href="?page=accueil"><div class="logo">LD<span style="color:#0096c8;">HA</span></div>
                     <div class="texteLogo">HIGH-TECH EXPERIENCE</div></a>
                 </div>
                 <div class="espaceV1"></div>
@@ -42,9 +42,9 @@
                     <?php
                         if(isset($_SESSION["LDHA_utilisateur"])){
                             if($_SESSION["LDHA_utilisateur"]->getIdRole()==1){
-                                echo '<div><a href="?page=listeProduits">Gestion articles</a></div>
-                                <div><a href="?page=listeCategories">Gestion catégories</a></div>
-                                <div><a href="?page=listeUtilisateurs">Gestion utilisateurs</a></div>';
+                                echo '<div><a href="?page=listeProduits">Produits</a></div>
+                                <div><a href="?page=listeCategories">Catégories</a></div>
+                                <div><a href="?page=listeUtilisateurs">Utilisateurs</a></div>';
                             }
                         }
                         
